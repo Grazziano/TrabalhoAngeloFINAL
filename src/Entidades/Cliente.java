@@ -17,7 +17,7 @@ public class Cliente {
     private String rua;
     private String bairro;
     private String cidade;
-
+    
     public Long getId() {
         return id;
     }
