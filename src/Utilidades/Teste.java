@@ -27,8 +27,7 @@ public class Teste {
         new ClienteDAO().inserir(c);
         
         System.out.println("Funcionou");
-        System.out.println("locao");
-        System.out.println("locao");
+        
        
     }
 
