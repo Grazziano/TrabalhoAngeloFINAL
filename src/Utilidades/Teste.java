@@ -28,6 +28,7 @@ public class Teste {
         
         System.out.println("Funcionou");
         System.out.println("locao");
+        System.out.println("locao");
        
     }
 
