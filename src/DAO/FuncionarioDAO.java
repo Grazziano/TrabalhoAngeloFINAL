@@ -55,7 +55,7 @@ public class FuncionarioDAO {
     public void alterar(Funcionario c) {
 
         
-        String sql = "UPDATE funcionario SET nome = ?, cpf = ?, sexo = ?, funcao = ?, endereco= ?, datanas = ?, telefone = ?, salario = ? WHERE ID = " + c.getId();
+        String sql = "UPDATE funcionario SET nome = ?, cpf = ?, sexo = ?, funcao = ?, endereco= ?, datanasc = ?, telefone = ?, salario = ? WHERE ID = " + c.getId();
         try {
             PreparedStatement stmt = conexao.prepareStatement(sql);
             stmt.setString(1, c.getNome());
@@ -129,7 +129,7 @@ public class FuncionarioDAO {
                 c.setTelefone(res.getString("telefone"));
                 c.setSalario(res.getString("salario"));
 
-                /////ADD CLIENTE NA LISTA
+                
                 retorno.add(c);
             }
             return retorno;

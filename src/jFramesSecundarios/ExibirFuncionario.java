@@ -193,10 +193,10 @@ public class ExibirFuncionario extends javax.swing.JFrame {
 
         }
         /// recupera o id presente na linha
-        Long idcliente = (Long) jTabelafuncionario.getValueAt(indice, 0);
+        Long idFuncionario = (Long) jTabelafuncionario.getValueAt(indice, 0);
 
        
-        EditarDadosCliente c = new EditarDadosCliente(idcliente);
+        AlterarFuncionario c = new AlterarFuncionario(idFuncionario);
         c.setVisible(true);
 
 
