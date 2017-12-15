@@ -298,8 +298,8 @@ public class AlterarFuncionario extends javax.swing.JFrame {
         ////exibir os campos na tabela
         jTnome.setText(c.getNome());
         jFcpf.setText(c.getCpf());
-        jTendereco.setText(c.getRua());
-        jTfuncao.setText(c.getBairro());
+        jTendereco.setText(c.getEndereco());
+        jTfuncao.setText(c.getFuncao());
         jFdatanascimento.setText(c.getDatanas());
         jCsexo.setSelectedItem(c.getSexo());
         jTsalario.setText(c.getSalario());
