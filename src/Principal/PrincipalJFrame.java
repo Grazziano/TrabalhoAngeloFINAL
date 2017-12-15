@@ -6,8 +6,8 @@
 package Principal;
 
 import jFramesSecundarios.CadastrarProdutos;
-import jFramesSecundarios.ExibirClientes;
-import jFramesSecundarios.ExibirProdutos;
+import jFramesSecundarios.*;
+
 import java.awt.Dimension;
 import java.awt.Toolkit;
 
@@ -40,6 +40,7 @@ public class PrincipalJFrame extends javax.swing.JFrame {
         jClientes = new javax.swing.JMenu();
         jMenuClientes = new javax.swing.JMenuItem();
         jMenuProdutos = new javax.swing.JMenuItem();
+        jMenuItem1 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Home");
@@ -83,6 +84,15 @@ public class PrincipalJFrame extends javax.swing.JFrame {
         });
         jClientes.add(jMenuProdutos);
 
+        jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/if_Profile_10593.png"))); // NOI18N
+        jMenuItem1.setText("Funcionarios");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        jClientes.add(jMenuItem1);
+
         jMenuBar1.add(jClientes);
 
         setJMenuBar(jMenuBar1);
@@ -114,6 +124,13 @@ public class PrincipalJFrame extends javax.swing.JFrame {
     private void jMenuProdutosListarProdutos(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuProdutosListarProdutos
           new ExibirProdutos().show();
     }//GEN-LAST:event_jMenuProdutosListarProdutos
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+    new ExibirFuncionario().show();
+
+
+
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -163,6 +180,7 @@ public class PrincipalJFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuClientes;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuProdutos;
     private javax.swing.JMenuItem jMenuSair;
     private javax.swing.JMenu jPrincipal;
