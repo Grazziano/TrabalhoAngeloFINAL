@@ -10,5 +10,10 @@ package DAO;
  * @author grazz
  */
 public class Teste {
+ 
     
+    
+    public static void main(String[] args) {
+        System.out.println("FUNCIONA DESGRAÇA");
+    }
 }
