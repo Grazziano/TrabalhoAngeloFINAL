@@ -54,7 +54,7 @@ public class ClienteDAO {
     public void alterar(Cliente c) {
 
         ////inserçao no bd 
-        String sql = "UPDATE CLIENTE SET nome = ?, cpf = ?. rua = ?, bairro = ?, cidade = ? WHERE ID = " + c.getId();
+        String sql = "UPDATE CLIENTE SET nome = ?, cpf = ?, rua = ?, bairro = ?, cidade = ? WHERE ID = " + c.getId();
         try {
             PreparedStatement stmt = conexao.prepareStatement(sql);
             stmt.setString(1, c.getNome());
@@ -133,7 +133,7 @@ public class ClienteDAO {
 //RECUPERA OS DADOS DE UM CLIENTE NO BD
 
     public Cliente consultar(Long idCliente) throws RuntimeException {
-        String sql = "SELECT id, nome, cpf, rua, bairro, cidade from cliente WHERE id =" + idCliente;
+        String sql = "SELECT id, nome, cpf, rua, bairro, cidade from cliente WHERE id = " + idCliente;
         try {
             ////////////RETORNO
             Cliente retorno = new Cliente();

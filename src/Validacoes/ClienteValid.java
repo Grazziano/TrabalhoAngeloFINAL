@@ -20,7 +20,7 @@ public class ClienteValid {
     //////////////////VALIDA AS INFORMAÇÕES ANTES DE ENVIA
     private void validar(Cliente p) throws RuntimeException {
         /////VALIDA NOME
-        if (p.getNome() == null || p.getNome().isEmpty()) {
+        if (p.getNome() == null || p.getNome().isEmpty())  {
             throw new RuntimeException("Nome é Obrigatorio!!!!");
 
         }

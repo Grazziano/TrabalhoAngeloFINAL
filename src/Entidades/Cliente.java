@@ -10,14 +10,14 @@ package Entidades;
  * @author Wolveraa
  */
 public class Cliente {
-    
-    private Long id;
-    private String nome;
+
+    protected Long id;
+    protected String nome;
     private String cpf;
     private String rua;
     private String bairro;
     private String cidade;
-    
+
     public Long getId() {
         return id;
     }
@@ -66,6 +66,4 @@ public class Cliente {
         this.cidade = cidade;
     }
 
- 
-    
 }

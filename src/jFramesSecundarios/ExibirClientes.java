@@ -20,6 +20,7 @@ import javax.swing.table.DefaultTableModel;
  */
 public class ExibirClientes extends javax.swing.JFrame {
 
+   
     /**
      * Creates new form FormularioClientes
      */
@@ -42,7 +43,7 @@ public class ExibirClientes extends javax.swing.JFrame {
     }
 
     ////BUSCA NO BANCO DE DADOS A LISTA DE CLIENTES E EXIBE NA TABELA
-    private void pesquisar() {
+    public  void pesquisar() {
 ///////////constroi a tabela
         String[] colunas = new String[]{"Código", "Nome", "CPF", "Rua", "Bairro", "Cidade"};
         DefaultTableModel listModel = new DefaultTableModel(colunas, 0);
@@ -88,6 +89,7 @@ public class ExibirClientes extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jTabelaClientes);
 
+        jButtonExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/if_list-delete_59948.png"))); // NOI18N
         jButtonExcluir.setText("Excluir");
         jButtonExcluir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -95,6 +97,7 @@ public class ExibirClientes extends javax.swing.JFrame {
             }
         });
 
+        jButtonAlterar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/if_edit_66728.png"))); // NOI18N
         jButtonAlterar.setText("Alterar");
         jButtonAlterar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -102,6 +105,7 @@ public class ExibirClientes extends javax.swing.JFrame {
             }
         });
 
+        jButtonNovoCadastro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/if_document-new_38981.png"))); // NOI18N
         jButtonNovoCadastro.setText("Novo Cadastro");
         jButtonNovoCadastro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -109,6 +113,7 @@ public class ExibirClientes extends javax.swing.JFrame {
             }
         });
 
+        JButtonAtt.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/if_update_64935.png"))); // NOI18N
         JButtonAtt.setText("Atualizar ");
         JButtonAtt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -120,7 +125,7 @@ public class ExibirClientes extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
+            .addComponent(jScrollPane1)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(JButtonAtt)
                 .addGap(44, 44, 44)
@@ -191,7 +196,7 @@ public class ExibirClientes extends javax.swing.JFrame {
         Long idcliente = (Long) jTabelaClientes.getValueAt(indice, 0);
 
         /////INSTANCIA O FORMULARIO DE EDIÇÃO PASSANDO O ID
-        EditarDados c = new EditarDados(idcliente);
+        EditarDadosCliente c = new EditarDadosCliente(idcliente);
         c.setVisible(true);
 
 

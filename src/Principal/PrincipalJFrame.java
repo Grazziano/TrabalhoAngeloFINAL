@@ -5,7 +5,9 @@
  */
 package Principal;
 
+import jFramesSecundarios.CadastrarProdutos;
 import jFramesSecundarios.ExibirClientes;
+import jFramesSecundarios.ExibirProdutos;
 import java.awt.Dimension;
 import java.awt.Toolkit;
 
@@ -31,19 +33,23 @@ public class PrincipalJFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jPrincipal = new javax.swing.JMenu();
         jMenuSair = new javax.swing.JMenuItem();
         jClientes = new javax.swing.JMenu();
         jMenuClientes = new javax.swing.JMenuItem();
-        jUtilitarios = new javax.swing.JMenu();
+        jMenuProdutos = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Home");
 
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/9537.jpg"))); // NOI18N
+
         jPrincipal.setMnemonic('P');
         jPrincipal.setText("Inicio");
 
+        jMenuSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/if_Exit_10583.png"))); // NOI18N
         jMenuSair.setText("Sair");
         jMenuSair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -57,6 +63,7 @@ public class PrincipalJFrame extends javax.swing.JFrame {
         jClientes.setMnemonic('C');
         jClientes.setText("Cadastros");
 
+        jMenuClientes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/if_contact-new_23203.png"))); // NOI18N
         jMenuClientes.setText("Clientes");
         jMenuClientes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -65,11 +72,16 @@ public class PrincipalJFrame extends javax.swing.JFrame {
         });
         jClientes.add(jMenuClientes);
 
-        jMenuBar1.add(jClientes);
+        jMenuProdutos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/if_basket_download_66688.png"))); // NOI18N
+        jMenuProdutos.setText("Produtos");
+        jMenuProdutos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuProdutosListarProdutos(evt);
+            }
+        });
+        jClientes.add(jMenuProdutos);
 
-        jUtilitarios.setMnemonic('U');
-        jUtilitarios.setText("Utilitarios");
-        jMenuBar1.add(jUtilitarios);
+        jMenuBar1.add(jClientes);
 
         setJMenuBar(jMenuBar1);
 
@@ -77,11 +89,13 @@ public class PrincipalJFrame extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 288, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();
@@ -94,6 +108,10 @@ public class PrincipalJFrame extends javax.swing.JFrame {
     private void ListarClientes(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ListarClientes
          new ExibirClientes().show();
     }//GEN-LAST:event_ListarClientes
+
+    private void jMenuProdutosListarProdutos(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuProdutosListarProdutos
+          new ExibirProdutos().show();
+    }//GEN-LAST:event_jMenuProdutosListarProdutos
 
     /**
      * @param args the command line arguments
@@ -140,10 +158,11 @@ public class PrincipalJFrame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu jClientes;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuClientes;
+    private javax.swing.JMenuItem jMenuProdutos;
     private javax.swing.JMenuItem jMenuSair;
     private javax.swing.JMenu jPrincipal;
-    private javax.swing.JMenu jUtilitarios;
     // End of variables declaration//GEN-END:variables
 }
