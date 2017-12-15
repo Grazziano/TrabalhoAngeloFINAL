@@ -46,6 +46,7 @@ public class PrincipalJFrame extends javax.swing.JFrame {
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/9537.jpg"))); // NOI18N
 
+        jPrincipal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/if_Info_10584.png"))); // NOI18N
         jPrincipal.setMnemonic('P');
         jPrincipal.setText("Inicio");
 
@@ -60,6 +61,7 @@ public class PrincipalJFrame extends javax.swing.JFrame {
 
         jMenuBar1.add(jPrincipal);
 
+        jClientes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/if_accessories-text-editor_118805.png"))); // NOI18N
         jClientes.setMnemonic('C');
         jClientes.setText("Cadastros");
 
